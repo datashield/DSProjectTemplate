@@ -1,6 +1,6 @@
-# DataSHIELD Base Client Environment
+# DataSHIELD Project Client Environment
 
-This R project template uses the [renv](https://rstudio.github.io/renv/) for setting up a reproducible [DataSHIELD](https://datashield.org/) client side R environment.
+This R project template uses the [renv](https://rstudio.github.io/renv/) for setting up a reproducible [DataSHIELD](https://datashield.org/) client side R environment. This allows to use the appropriate DataSHIELD client R packages, matching the selected server-side [DataSHIELD profiles](https://opaldoc.obiba.org/en/latest/admin/rserver.html#datashield-profiles).
 
 The project's R environment includes the following R packages (and their dependencies):
 
