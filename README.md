@@ -19,7 +19,7 @@ Read the [Introduction to renv](https://rstudio.github.io/renv/articles/renv.htm
 
 ### Open Project in RStudio
 
-1. Open this project in R studio by selecting the `project.Rproj` file.
+1. Open this project in [Rstudio](https://www.rstudio.com/) by selecting the `project.Rproj` file.
 2. If reported by *renv* in the R console, run the `renv::restore()` to install the R packages in their specific version (i.e. as described by the `renv.lock` file).
 
 Use `libPaths()` to locate where the R packages are installed.
