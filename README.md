@@ -22,8 +22,11 @@ Read the [Introduction to renv](https://rstudio.github.io/renv/articles/renv.htm
 1. Open this project in R studio by selecting the `project.Rproj` file.
 2. If reported by *renv* in the R console, run the `renv::restore()` to install the R packages in their specific version (i.e. as described by the `renv.lock` file).
 
+Use `libPaths()` to locate where the R packages are installed.
+
 ### Adding a new dependency
 
-1. Install the R package using `install.packages()` or using [renv::install()](https://rstudio.github.io/renv/reference/install.html) which allows to manage R packages installed from a GitHub repository, Bioconductor or a local package folder
+1. Install the R package using `install.packages()` or using [renv::install()](https://rstudio.github.io/renv/reference/install.html) which allows to manage R packages installed from an archived version, a GitHub repository, Bioconductor repository or a local package folder
 2. Load the R package in one of your R source code with `library()` (see [R/script.R](https://github.com/datashield/DSProjectTemplate/blob/main/R/script.R) as an example)
 3. Run `renv::snapshot()` to save the new R environment in the file `renv.lock` file
+
