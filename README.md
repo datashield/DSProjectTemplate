@@ -13,7 +13,7 @@ The project's R environment includes the following R packages (and their depende
 
 ### Clone this Repository
 
-Start by creating your project source code repository from this template: see instructions in [Creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+Start by creating your project source code repository from this template: see instructions in [Creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template). You could also just download this folder, but it is a good practice to have source code in a version control system (Git).
 
 Read the [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html) vignette to learn the basics of R environment management.
 
@@ -24,9 +24,20 @@ Read the [Introduction to renv](https://rstudio.github.io/renv/articles/renv.htm
 
 Use `libPaths()` to locate where the R packages are installed.
 
-### Adding a new dependency
+### Adding a new Dependency
 
 1. Install the R package using `install.packages()` or using [renv::install()](https://rstudio.github.io/renv/reference/install.html) which allows to manage R packages installed from an archived version, a GitHub repository, Bioconductor repository or a local package folder
 2. Load the R package in one of your R source code with `library()` (see [R/script.R](https://github.com/datashield/DSProjectTemplate/blob/main/R/script.R) as an example)
 3. Run `renv::snapshot()` to save the new R environment in the file `renv.lock` file
 
+### Use Git Branches
+
+Different R environments means different package dependencies, and also potentially different R/DataSHIELD analysis code. In order to maintain/develop different environments in parallel, you can use the Git branches. Upgrading to new versions of dependencies will be facilitated. To make a new branch:
+
+1. Select Git tab and *New Branch* in Rstudio, or command line `git checkout -b branchName`
+2. Install/update R packages
+3. Update analysis R script to connect to the appropriate DataSHIELD server profiles and to fix any breaking changes
+4. Run `renv::snapshot()`
+5. Commit changes in Git using Rstudio or command line
+
+See also the vignette [Collaborating with renv](https://rstudio.github.io/renv/articles/collaborating.html).
