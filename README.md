@@ -24,11 +24,16 @@ Read the [Introduction to renv](https://rstudio.github.io/renv/articles/renv.htm
 
 Use `libPaths()` to locate where the R packages are installed.
 
-### Adding a new Dependency
+### Adding a new R Package Dependency
 
 1. Install the R package using `install.packages()` or using [renv::install()](https://rstudio.github.io/renv/reference/install.html) which allows to manage R packages installed from an archived version, a GitHub repository, Bioconductor repository or a local package folder
 2. Load the R package in one of your R source code with `library()` (see [R/script.R](https://github.com/datashield/DSProjectTemplate/blob/main/R/script.R) as an example)
-3. Run `renv::snapshot()` to save the new R environment in the file `renv.lock` file
+3. Run `renv::snapshot()` to register this package as part of your project environment
+
+### Removing a R Package Dependency
+
+1. Edit your R source code and remove the `library()` load statements of the R package to remove
+2. Run renv::snapshot() to unregister this package from your project environment
 
 ### Use Git Branches
 
