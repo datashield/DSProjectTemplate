@@ -30,10 +30,10 @@ Use `libPaths()` to locate where the R packages are installed.
 2. Load the R package in one of your R source code with `library()` (see [R/script.R](https://github.com/datashield/DSProjectTemplate/blob/main/R/script.R) as an example)
 3. Run `renv::snapshot()` to register this package as part of your project environment
 
-### Removing a R Package Dependency
+### Removing an R Package Dependency
 
 1. Edit your R source code and remove the `library()` load statements of the R package to remove
-2. Run renv::snapshot() to unregister this package from your project environment
+2. Run `renv::snapshot()` to unregister this package from your project environment
 
 ### Use Git Branches
 
